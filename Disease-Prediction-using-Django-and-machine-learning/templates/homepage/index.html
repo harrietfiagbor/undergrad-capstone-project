@@ -1,0 +1,300 @@
+﻿{% extends "basic.html" %}
+{% load static %}
+
+
+{% block head %}
+
+
+{% endblock %}
+
+
+
+
+{% block body %}
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Get Quick Medical Advice...</h1>
+  <p class="lead">
+    This clever system will provide you with immediate advice about your ailment. This isn't a hunch on the disease
+    system's part. This technology employs artificial intelligence to search through data gathered by doctors and
+    diseases. You enter your numerous symptoms and receive a diagnosis of a possible ailment. After that, you can
+    consult with a doctor for advice.
+
+
+
+    {% if user.is_authenticated %}
+
+
+    {% else %}
+
+  <p class="lead">
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bd-example-modal-lg">Get
+      started</button>
+  </p>
+
+
+</div>
+
+<br><br><br>
+<div class="container mt-5 mb-3" style="width:fit-content;">
+  <center>
+    <h2>Sign-In As</h2>
+  </center>
+
+
+  <form>
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col">
+          <a href="{% url 'sign_in_admin' %}">
+            <img alt="admin" src="{% static 'homepage/admin-avatar.png' %}" class="img">
+          </a>
+          <h3>Admin</h3>
+        </div>
+
+        <div class="col">
+          <a href="{% url 'sign_in_doctor' %}">
+            <img alt="doctor" src="{% static 'homepage/doctor-avatar.png' %}" class="img">
+          </a>
+          <h3>Doctor</h3>
+        </div>
+
+        <div class="col">
+          <a href="{% url 'sign_in_patient' %}">
+            <img alt="patient" src="{% static 'homepage/patient-avatar.png' %}" class="img">
+          </a>
+          <h3>Patient</h3>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+{% endif %}
+
+<br><br>
+
+
+
+
+<!-- Large modal -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <center>
+        <h2>Sign-In As</h2>
+      </center>
+      <br><br>
+
+      <center>
+        <form>
+          <div class="container mt-5 mb-5">
+            <div class="row">
+              <div class="col">
+                <a href="{% url 'sign_in_admin' %}">
+                  <img alt="admin" src="{% static 'homepage/admin-avatar.png' %}" class="img">
+                </a>
+              </div>
+
+              <div class="col">
+                <a href="{% url 'sign_in_doctor' %}">
+                  <img alt="doctor" src="{% static 'homepage/doctor-avatar.png' %}" class="img">
+                </a>
+              </div>
+
+              <div class="col">
+                <a href="{% url 'sign_in_patient' %}">
+                  <img alt="patient" src="{% static 'homepage/patient-avatar.png' %}" class="img">
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </center>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Large modal -->
+
+<div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <center>
+        <h2>Sign-Up As</h2>
+      </center>
+      <br><br>
+
+      <center>
+        <form>
+          <div class="container mt-5 mb-5 ml-5 mr-5">
+            <div class="row">
+
+              <div class="col">
+                <a href="{% url 'signup_doctor' %}">
+                  <img alt="doctor" src="{% static 'homepage/doctor-avatar.png' %}" class="img">
+                </a>
+              </div>
+
+              <div class="col">
+                <a href="{% url 'signup_patient' %}">
+                  <img alt="patient" src="{% static 'homepage/patient-avatar.png' %}" class="img">
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </center>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<br><br><br><br>
+<center>
+  <h2>Our Top Doctors</h2>
+</center>
+<div class="row mt-5 mb-5">
+  <div class="col">
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="card-title">Dr. John Doe </h5>
+        <img alt="admin" src="{% static 'homepage/unknown_doctor1.png' %}" width="150" height="150" class="rounded">
+        <p class="card-text">Address Here</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="card-title">Dr. John Doe </h5>
+        <img alt="admin" src="{% static 'homepage/unknown_doctor1.png' %}" width="150" height="150" class="rounded">
+        <p class="card-text">Address Here</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="card-title">Dr. John Doe</h5>
+        <img alt="admin" src="{% static 'homepage/unknown_doctor1.png' %}" width="150" height="150" class="rounded">
+        <p class="card-text">Address Here</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer" class="card bg-dark text-white">
+  <div class="card-body">
+    <!-- Contact-
+
+    <ul>
+
+      <li>
+        <h5 class="mb-1">Email: harrietfiagbor@gmail.com</h5>
+      </li>
+      <li>
+        <h5 class="mb-1">Contact no. +233541456317</h5>
+      </li>
+       -->
+    <!-- <h5 class="mb-1">Address: CET, bbsr</h5> -->
+    <div class="footer-copyright text-center">
+      <!-- © 2022 Copyright : -->
+      <!-- <a href="#"> diagnoseMe.me</a>
+      <p>Instagram: <a href="https://www.instagram.com/adjoa_dede/" class="fa-brands fa-instagram"></a>
+        &nbsp;&nbsp;&nbsp;LinkedIn: <a href="https://www.linkedin.com/in/harriet-fiagbor-ab1062182/"
+          class="fa-brands fa-linkedin"></a>
+      </p> -->
+
+
+      <section>
+        <nav>
+          <div class="bottom-container">
+            <a class="footer-link" href="https://www.linkedin.com/in/harriet-fiagbor-ab1062182/"><i
+                class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a class="footer-link" href="https://www.instagram.com/adjoa_dede/"><i class="fa-brands fa-instagram"></i>
+              Instagram</a>
+            <a class="footer-link" href="https://web.facebook.com/harriet.fiagbor"><i class="fa-brands fa-facebook"></i>
+              Facebook</a> <br> <br>
+            <p class="copyright">© 2022 diagnoseMe</p>
+          </div>
+        </nav>
+      </section>
+    </div>
+
+
+  </div>
+  </li>
+
+  </ul>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+{% endblock %}

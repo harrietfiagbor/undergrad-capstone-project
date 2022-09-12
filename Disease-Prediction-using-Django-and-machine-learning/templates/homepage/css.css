@@ -1,0 +1,24 @@
+.img {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/* 
+body {
+
+    background-image: url("/static/homepage/gray.jpg");
+    background-attachment: fixed;
+    opacity: 0.93;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+} */
